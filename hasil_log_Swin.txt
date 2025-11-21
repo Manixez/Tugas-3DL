@@ -1,0 +1,1239 @@
+Using GPU: NVIDIA GeForce RTX 3050 Laptop GPU
+Using image size: 224x224
+Loading CIFAR-10 datasets...
+Train dataset size: 40000
+Validation dataset size: 10000
+Creating label encoder...
+Number of classes: 10
+Classes: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Label to index mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9}
+
+Initializing Swin Transformer Tiny model...
+Loaded Swin Transformer Tiny pretrained model
+Fine-tuning strategy:
+- Frozen: All backbone layers (patch embed, position embed, transformer blocks)
+- Trainable: Only classification head (10 classes)
+Head structure: ClassifierHead(
+  (global_pool): SelectAdaptivePool2d(pool_type=avg, flatten=Identity())
+  (drop): Dropout(p=0.0, inplace=False)
+  (fc): Linear(in_features=768, out_features=10, bias=True)
+  (flatten): Identity()
+)
+SwinTiny(
+  (model): SwinTransformer(
+    (patch_embed): PatchEmbed(
+      (proj): Conv2d(3, 96, kernel_size=(4, 4), stride=(4, 4))
+      (norm): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+    )
+    (layers): Sequential(
+      (0): SwinTransformerStage(
+        (downsample): Identity()
+        (blocks): Sequential(
+          (0): SwinTransformerBlock(
+            (norm1): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+            (attn): WindowAttention(
+              (qkv): Linear(in_features=96, out_features=288, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=96, out_features=96, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+              (softmax): Softmax(dim=-1)
+            )
+            (drop_path1): Identity()
+            (norm2): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=96, out_features=384, bias=True)
+              (act): GELU(approximate='none')
+              (drop1): Dropout(p=0.0, inplace=False)
+              (norm): Identity()
+              (fc2): Linear(in_features=384, out_features=96, bias=True)
+              (drop2): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path2): Identity()
+          )
+          (1): SwinTransformerBlock(
+            (norm1): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+            (attn): WindowAttention(
+              (qkv): Linear(in_features=96, out_features=288, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=96, out_features=96, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+              (softmax): Softmax(dim=-1)
+            )
+            (drop_path1): DropPath(drop_prob=0.009)
+            (norm2): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=96, out_features=384, bias=True)
+              (act): GELU(approximate='none')
+              (drop1): Dropout(p=0.0, inplace=False)
+              (norm): Identity()
+              (fc2): Linear(in_features=384, out_features=96, bias=True)
+              (drop2): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path2): DropPath(drop_prob=0.009)
+          )
+        )
+      )
+      (1): SwinTransformerStage(
+        (downsample): PatchMerging(
+          (norm): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+          (reduction): Linear(in_features=384, out_features=192, bias=False)
+        )
+        (blocks): Sequential(
+          (0): SwinTransformerBlock(
+            (norm1): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (attn): WindowAttention(
+              (qkv): Linear(in_features=192, out_features=576, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=192, out_features=192, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+              (softmax): Softmax(dim=-1)
+            )
+            (drop_path1): DropPath(drop_prob=0.018)
+            (norm2): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=192, out_features=768, bias=True)
+              (act): GELU(approximate='none')
+              (drop1): Dropout(p=0.0, inplace=False)
+              (norm): Identity()
+              (fc2): Linear(in_features=768, out_features=192, bias=True)
+              (drop2): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path2): DropPath(drop_prob=0.018)
+          )
+          (1): SwinTransformerBlock(
+            (norm1): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (attn): WindowAttention(
+              (qkv): Linear(in_features=192, out_features=576, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=192, out_features=192, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+              (softmax): Softmax(dim=-1)
+            )
+            (drop_path1): DropPath(drop_prob=0.027)
+            (norm2): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=192, out_features=768, bias=True)
+              (act): GELU(approximate='none')
+              (drop1): Dropout(p=0.0, inplace=False)
+              (norm): Identity()
+              (fc2): Linear(in_features=768, out_features=192, bias=True)
+              (drop2): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path2): DropPath(drop_prob=0.027)
+          )
+        )
+      )
+      (2): SwinTransformerStage(
+        (downsample): PatchMerging(
+          (norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (reduction): Linear(in_features=768, out_features=384, bias=False)
+        )
+        (blocks): Sequential(
+          (0): SwinTransformerBlock(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): WindowAttention(
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+              (softmax): Softmax(dim=-1)
+            )
+            (drop_path1): DropPath(drop_prob=0.036)
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=1536, bias=True)
+              (act): GELU(approximate='none')
+              (drop1): Dropout(p=0.0, inplace=False)
+              (norm): Identity()
+              (fc2): Linear(in_features=1536, out_features=384, bias=True)
+              (drop2): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path2): DropPath(drop_prob=0.036)
+          )
+          (1): SwinTransformerBlock(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): WindowAttention(
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+              (softmax): Softmax(dim=-1)
+            )
+            (drop_path1): DropPath(drop_prob=0.045)
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=1536, bias=True)
+              (act): GELU(approximate='none')
+              (drop1): Dropout(p=0.0, inplace=False)
+              (norm): Identity()
+              (fc2): Linear(in_features=1536, out_features=384, bias=True)
+              (drop2): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path2): DropPath(drop_prob=0.045)
+          )
+          (2): SwinTransformerBlock(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): WindowAttention(
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+              (softmax): Softmax(dim=-1)
+            )
+            (drop_path1): DropPath(drop_prob=0.055)
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=1536, bias=True)
+              (act): GELU(approximate='none')
+              (drop1): Dropout(p=0.0, inplace=False)
+              (norm): Identity()
+              (fc2): Linear(in_features=1536, out_features=384, bias=True)
+              (drop2): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path2): DropPath(drop_prob=0.055)
+          )
+          (3): SwinTransformerBlock(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): WindowAttention(
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+              (softmax): Softmax(dim=-1)
+            )
+            (drop_path1): DropPath(drop_prob=0.064)
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=1536, bias=True)
+              (act): GELU(approximate='none')
+              (drop1): Dropout(p=0.0, inplace=False)
+              (norm): Identity()
+              (fc2): Linear(in_features=1536, out_features=384, bias=True)
+              (drop2): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path2): DropPath(drop_prob=0.064)
+          )
+          (4): SwinTransformerBlock(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): WindowAttention(
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+              (softmax): Softmax(dim=-1)
+            )
+            (drop_path1): DropPath(drop_prob=0.073)
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=1536, bias=True)
+              (act): GELU(approximate='none')
+              (drop1): Dropout(p=0.0, inplace=False)
+              (norm): Identity()
+              (fc2): Linear(in_features=1536, out_features=384, bias=True)
+              (drop2): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path2): DropPath(drop_prob=0.073)
+          )
+          (5): SwinTransformerBlock(
+            (norm1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (attn): WindowAttention(
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+              (softmax): Softmax(dim=-1)
+            )
+            (drop_path1): DropPath(drop_prob=0.082)
+            (norm2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=384, out_features=1536, bias=True)
+              (act): GELU(approximate='none')
+              (drop1): Dropout(p=0.0, inplace=False)
+              (norm): Identity()
+              (fc2): Linear(in_features=1536, out_features=384, bias=True)
+              (drop2): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path2): DropPath(drop_prob=0.082)
+          )
+        )
+      )
+      (3): SwinTransformerStage(
+        (downsample): PatchMerging(
+          (norm): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+          (reduction): Linear(in_features=1536, out_features=768, bias=False)
+        )
+        (blocks): Sequential(
+          (0): SwinTransformerBlock(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): WindowAttention(
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+              (softmax): Softmax(dim=-1)
+            )
+            (drop_path1): DropPath(drop_prob=0.091)
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=3072, bias=True)
+              (act): GELU(approximate='none')
+              (drop1): Dropout(p=0.0, inplace=False)
+              (norm): Identity()
+              (fc2): Linear(in_features=3072, out_features=768, bias=True)
+              (drop2): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path2): DropPath(drop_prob=0.091)
+          )
+          (1): SwinTransformerBlock(
+            (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (attn): WindowAttention(
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (attn_drop): Dropout(p=0.0, inplace=False)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+              (proj_drop): Dropout(p=0.0, inplace=False)
+              (softmax): Softmax(dim=-1)
+            )
+            (drop_path1): DropPath(drop_prob=0.100)
+            (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Mlp(
+              (fc1): Linear(in_features=768, out_features=3072, bias=True)
+              (act): GELU(approximate='none')
+              (drop1): Dropout(p=0.0, inplace=False)
+              (norm): Identity()
+              (fc2): Linear(in_features=3072, out_features=768, bias=True)
+              (drop2): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path2): DropPath(drop_prob=0.100)
+          )
+        )
+      )
+    )
+    (norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (head): ClassifierHead(
+      (global_pool): SelectAdaptivePool2d(pool_type=avg, flatten=Identity())
+      (drop): Dropout(p=0.0, inplace=False)
+      (fc): Linear(in_features=768, out_features=10, bias=True)
+      (flatten): Identity()
+    )
+  )
+)
+Total parameters: 27,527,044
+Trainable parameters: 7,690
+Frozen parameters: 27,519,354
+
+Starting training with:
+- Device: cuda
+- Model: Swin Transformer Tiny (pretrained)
+- Image size: 224x224
+- Batch size: 128
+- Base learning rate: 0.0015
+- Warmup epochs: 2
+- Number of epochs: 25
+- Weight decay: 0.01
+- Gradient clipping: 1.0
+- Transfer learning: Backbone frozen, head trainable
+- Scheduler: Cosine with warmup
+--------------------------------------------------------------------------------
+
+Epoch [1/25]
+--------------------------------------------------
+Batch [0/313], Loss: 2.4409
+Batch [10/313], Loss: 1.2357
+Batch [20/313], Loss: 0.7721
+Batch [30/313], Loss: 0.5066
+Batch [40/313], Loss: 0.5084
+Batch [50/313], Loss: 0.4046
+Batch [60/313], Loss: 0.4843
+Batch [70/313], Loss: 0.4290
+Batch [80/313], Loss: 0.4294
+Batch [90/313], Loss: 0.3674
+Batch [100/313], Loss: 0.4614
+Batch [110/313], Loss: 0.4487
+Batch [120/313], Loss: 0.3009
+Batch [130/313], Loss: 0.4119
+Batch [140/313], Loss: 0.2980
+Batch [150/313], Loss: 0.2800
+Batch [160/313], Loss: 0.2862
+Batch [170/313], Loss: 0.3374
+Batch [180/313], Loss: 0.2997
+Batch [190/313], Loss: 0.3653
+Batch [200/313], Loss: 0.2777
+Batch [210/313], Loss: 0.3807
+Batch [220/313], Loss: 0.3344
+Batch [230/313], Loss: 0.4103
+Batch [240/313], Loss: 0.3255
+Batch [250/313], Loss: 0.1743
+Batch [260/313], Loss: 0.2488
+Batch [270/313], Loss: 0.2335
+Batch [280/313], Loss: 0.2874
+Batch [290/313], Loss: 0.1704
+Batch [300/313], Loss: 0.3417
+Batch [310/313], Loss: 0.3584
+
+Epoch 1 Results:
+Time: 277.75s
+Train - Loss: 0.4257, Acc: 0.8740, F1: 0.8739, Precision: 0.8741, Recall: 0.8740
+Val   - Loss: 0.2586, Acc: 0.9138, F1: 0.9137, Precision: 0.9139, Recall: 0.9138
+New best model saved! Validation accuracy: 0.9138
+--------------------------------------------------------------------------------
+
+Epoch [2/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.2860
+Batch [10/313], Loss: 0.2963
+Batch [20/313], Loss: 0.2617
+Batch [30/313], Loss: 0.3709
+Batch [40/313], Loss: 0.2648
+Batch [50/313], Loss: 0.2585
+Batch [60/313], Loss: 0.2629
+Batch [70/313], Loss: 0.3345
+Batch [80/313], Loss: 0.3764
+Batch [90/313], Loss: 0.2390
+Batch [100/313], Loss: 0.3162
+Batch [110/313], Loss: 0.2155
+Batch [120/313], Loss: 0.2991
+Batch [130/313], Loss: 0.3943
+Batch [140/313], Loss: 0.2018
+Batch [150/313], Loss: 0.3078
+Batch [160/313], Loss: 0.2459
+Batch [170/313], Loss: 0.2894
+Batch [180/313], Loss: 0.3168
+Batch [190/313], Loss: 0.3282
+Batch [200/313], Loss: 0.2249
+Batch [210/313], Loss: 0.3654
+Batch [220/313], Loss: 0.4037
+Batch [230/313], Loss: 0.2651
+Batch [240/313], Loss: 0.2120
+Batch [250/313], Loss: 0.3094
+Batch [260/313], Loss: 0.1735
+Batch [270/313], Loss: 0.2343
+Batch [280/313], Loss: 0.3532
+Batch [290/313], Loss: 0.3131
+Batch [300/313], Loss: 0.2307
+Batch [310/313], Loss: 0.2933
+
+Epoch 2 Results:
+Time: 286.67s
+Train - Loss: 0.2710, Acc: 0.9110, F1: 0.9109, Precision: 0.9109, Recall: 0.9110
+Val   - Loss: 0.2396, Acc: 0.9199, F1: 0.9200, Precision: 0.9208, Recall: 0.9199
+New best model saved! Validation accuracy: 0.9199
+--------------------------------------------------------------------------------
+
+Epoch [3/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.2769
+Batch [10/313], Loss: 0.2577
+Batch [20/313], Loss: 0.2397
+Batch [30/313], Loss: 0.2296
+Batch [40/313], Loss: 0.2290
+Batch [50/313], Loss: 0.1725
+Batch [60/313], Loss: 0.2580
+Batch [70/313], Loss: 0.2971
+Batch [80/313], Loss: 0.3280
+Batch [90/313], Loss: 0.3220
+Batch [100/313], Loss: 0.2718
+Batch [110/313], Loss: 0.1399
+Batch [120/313], Loss: 0.3662
+Batch [130/313], Loss: 0.2564
+Batch [140/313], Loss: 0.2497
+Batch [150/313], Loss: 0.3763
+Batch [160/313], Loss: 0.2167
+Batch [170/313], Loss: 0.2527
+Batch [180/313], Loss: 0.2153
+Batch [190/313], Loss: 0.2578
+Batch [200/313], Loss: 0.2146
+Batch [210/313], Loss: 0.2124
+Batch [220/313], Loss: 0.2332
+Batch [230/313], Loss: 0.3002
+Batch [240/313], Loss: 0.1927
+Batch [250/313], Loss: 0.2385
+Batch [260/313], Loss: 0.2493
+Batch [270/313], Loss: 0.2350
+Batch [280/313], Loss: 0.3100
+Batch [290/313], Loss: 0.2302
+Batch [300/313], Loss: 0.2992
+Batch [310/313], Loss: 0.2168
+
+Epoch 3 Results:
+Time: 288.34s
+Train - Loss: 0.2471, Acc: 0.9168, F1: 0.9168, Precision: 0.9168, Recall: 0.9168
+Val   - Loss: 0.2283, Acc: 0.9227, F1: 0.9229, Precision: 0.9234, Recall: 0.9227
+New best model saved! Validation accuracy: 0.9227
+--------------------------------------------------------------------------------
+
+Epoch [4/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.3075
+Batch [10/313], Loss: 0.2284
+Batch [20/313], Loss: 0.1631
+Batch [30/313], Loss: 0.3214
+Batch [40/313], Loss: 0.2611
+Batch [50/313], Loss: 0.2745
+Batch [60/313], Loss: 0.1930
+Batch [70/313], Loss: 0.1797
+Batch [80/313], Loss: 0.2815
+Batch [90/313], Loss: 0.2026
+Batch [100/313], Loss: 0.1473
+Batch [110/313], Loss: 0.2021
+Batch [120/313], Loss: 0.1503
+Batch [130/313], Loss: 0.2685
+Batch [140/313], Loss: 0.4337
+Batch [150/313], Loss: 0.4527
+Batch [160/313], Loss: 0.2929
+Batch [170/313], Loss: 0.1835
+Batch [180/313], Loss: 0.1494
+Batch [190/313], Loss: 0.3218
+Batch [200/313], Loss: 0.1655
+Batch [210/313], Loss: 0.2384
+Batch [220/313], Loss: 0.1683
+Batch [230/313], Loss: 0.1862
+Batch [240/313], Loss: 0.2630
+Batch [250/313], Loss: 0.2103
+Batch [260/313], Loss: 0.1556
+Batch [270/313], Loss: 0.3127
+Batch [280/313], Loss: 0.3172
+Batch [290/313], Loss: 0.2306
+Batch [300/313], Loss: 0.2645
+Batch [310/313], Loss: 0.2435
+
+Epoch 4 Results:
+Time: 288.55s
+Train - Loss: 0.2349, Acc: 0.9194, F1: 0.9194, Precision: 0.9194, Recall: 0.9194
+Val   - Loss: 0.2263, Acc: 0.9226, F1: 0.9225, Precision: 0.9228, Recall: 0.9226
+No improvement in validation accuracy for 1 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [5/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.2076
+Batch [10/313], Loss: 0.2159
+Batch [20/313], Loss: 0.2429
+Batch [30/313], Loss: 0.1196
+Batch [40/313], Loss: 0.1706
+Batch [50/313], Loss: 0.2499
+Batch [60/313], Loss: 0.1863
+Batch [70/313], Loss: 0.2220
+Batch [80/313], Loss: 0.1451
+Batch [90/313], Loss: 0.2166
+Batch [100/313], Loss: 0.2569
+Batch [110/313], Loss: 0.2719
+Batch [120/313], Loss: 0.2538
+Batch [130/313], Loss: 0.1417
+Batch [140/313], Loss: 0.2538
+Batch [150/313], Loss: 0.2090
+Batch [160/313], Loss: 0.2255
+Batch [170/313], Loss: 0.1976
+Batch [180/313], Loss: 0.1827
+Batch [190/313], Loss: 0.2792
+Batch [200/313], Loss: 0.2663
+Batch [210/313], Loss: 0.3259
+Batch [220/313], Loss: 0.2170
+Batch [230/313], Loss: 0.2348
+Batch [240/313], Loss: 0.2662
+Batch [250/313], Loss: 0.2814
+Batch [260/313], Loss: 0.3396
+Batch [270/313], Loss: 0.1903
+Batch [280/313], Loss: 0.2858
+Batch [290/313], Loss: 0.1773
+Batch [300/313], Loss: 0.2103
+Batch [310/313], Loss: 0.2003
+
+Epoch 5 Results:
+Time: 289.31s
+Train - Loss: 0.2297, Acc: 0.9218, F1: 0.9218, Precision: 0.9217, Recall: 0.9218
+Val   - Loss: 0.2270, Acc: 0.9223, F1: 0.9226, Precision: 0.9236, Recall: 0.9223
+No improvement in validation accuracy for 2 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [6/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.1833
+Batch [10/313], Loss: 0.2032
+Batch [20/313], Loss: 0.1515
+Batch [30/313], Loss: 0.2983
+Batch [40/313], Loss: 0.1513
+Batch [50/313], Loss: 0.1954
+Batch [60/313], Loss: 0.1426
+Batch [70/313], Loss: 0.1812
+Batch [80/313], Loss: 0.1283
+Batch [90/313], Loss: 0.1459
+Batch [100/313], Loss: 0.2121
+Batch [110/313], Loss: 0.1889
+Batch [120/313], Loss: 0.2835
+Batch [130/313], Loss: 0.1961
+Batch [140/313], Loss: 0.2275
+Batch [150/313], Loss: 0.3327
+Batch [160/313], Loss: 0.1332
+Batch [170/313], Loss: 0.3375
+Batch [180/313], Loss: 0.2641
+Batch [190/313], Loss: 0.2083
+Batch [200/313], Loss: 0.1740
+Batch [210/313], Loss: 0.3537
+Batch [220/313], Loss: 0.1241
+Batch [230/313], Loss: 0.2544
+Batch [240/313], Loss: 0.2098
+Batch [250/313], Loss: 0.2270
+Batch [260/313], Loss: 0.2747
+Batch [270/313], Loss: 0.2962
+Batch [280/313], Loss: 0.2006
+Batch [290/313], Loss: 0.2540
+Batch [300/313], Loss: 0.1833
+Batch [310/313], Loss: 0.2111
+
+Epoch 6 Results:
+Time: 293.01s
+Train - Loss: 0.2222, Acc: 0.9239, F1: 0.9238, Precision: 0.9239, Recall: 0.9239
+Val   - Loss: 0.2203, Acc: 0.9252, F1: 0.9252, Precision: 0.9254, Recall: 0.9252
+New best model saved! Validation accuracy: 0.9252
+--------------------------------------------------------------------------------
+
+Epoch [7/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.1576
+Batch [10/313], Loss: 0.1938
+Batch [20/313], Loss: 0.2506
+Batch [30/313], Loss: 0.2156
+Batch [40/313], Loss: 0.2328
+Batch [50/313], Loss: 0.1508
+Batch [60/313], Loss: 0.2063
+Batch [70/313], Loss: 0.2244
+Batch [80/313], Loss: 0.2638
+Batch [90/313], Loss: 0.1512
+Batch [100/313], Loss: 0.2542
+Batch [110/313], Loss: 0.3724
+Batch [120/313], Loss: 0.2152
+Batch [130/313], Loss: 0.2600
+Batch [140/313], Loss: 0.1820
+Batch [150/313], Loss: 0.2078
+Batch [160/313], Loss: 0.1884
+Batch [170/313], Loss: 0.1353
+Batch [180/313], Loss: 0.2069
+Batch [190/313], Loss: 0.2237
+Batch [200/313], Loss: 0.1981
+Batch [210/313], Loss: 0.2350
+Batch [220/313], Loss: 0.1227
+Batch [230/313], Loss: 0.1928
+Batch [240/313], Loss: 0.1814
+Batch [250/313], Loss: 0.1951
+Batch [260/313], Loss: 0.1875
+Batch [270/313], Loss: 0.2280
+Batch [280/313], Loss: 0.1864
+Batch [290/313], Loss: 0.2956
+Batch [300/313], Loss: 0.2121
+Batch [310/313], Loss: 0.1985
+
+Epoch 7 Results:
+Time: 304.70s
+Train - Loss: 0.2166, Acc: 0.9258, F1: 0.9257, Precision: 0.9257, Recall: 0.9258
+Val   - Loss: 0.2180, Acc: 0.9252, F1: 0.9252, Precision: 0.9254, Recall: 0.9252
+No improvement in validation accuracy for 1 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [8/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.2599
+Batch [10/313], Loss: 0.2233
+Batch [20/313], Loss: 0.1296
+Batch [30/313], Loss: 0.1962
+Batch [40/313], Loss: 0.2010
+Batch [50/313], Loss: 0.3060
+Batch [60/313], Loss: 0.2508
+Batch [70/313], Loss: 0.2426
+Batch [80/313], Loss: 0.2010
+Batch [90/313], Loss: 0.1692
+Batch [100/313], Loss: 0.1870
+Batch [110/313], Loss: 0.1802
+Batch [120/313], Loss: 0.2548
+Batch [130/313], Loss: 0.1820
+Batch [140/313], Loss: 0.2215
+Batch [150/313], Loss: 0.2023
+Batch [160/313], Loss: 0.1930
+Batch [170/313], Loss: 0.1361
+Batch [180/313], Loss: 0.1210
+Batch [190/313], Loss: 0.2145
+Batch [200/313], Loss: 0.1423
+Batch [210/313], Loss: 0.1718
+Batch [220/313], Loss: 0.2222
+Batch [230/313], Loss: 0.2648
+Batch [240/313], Loss: 0.2609
+Batch [250/313], Loss: 0.1069
+Batch [260/313], Loss: 0.1930
+Batch [270/313], Loss: 0.1751
+Batch [280/313], Loss: 0.2176
+Batch [290/313], Loss: 0.1832
+Batch [300/313], Loss: 0.1233
+Batch [310/313], Loss: 0.1789
+
+Epoch 8 Results:
+Time: 305.61s
+Train - Loss: 0.2135, Acc: 0.9265, F1: 0.9265, Precision: 0.9265, Recall: 0.9265
+Val   - Loss: 0.2199, Acc: 0.9262, F1: 0.9262, Precision: 0.9264, Recall: 0.9262
+New best model saved! Validation accuracy: 0.9262
+--------------------------------------------------------------------------------
+
+Epoch [9/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.1550
+Batch [10/313], Loss: 0.2602
+Batch [20/313], Loss: 0.1481
+Batch [30/313], Loss: 0.2280
+Batch [40/313], Loss: 0.1803
+Batch [50/313], Loss: 0.1963
+Batch [60/313], Loss: 0.2216
+Batch [70/313], Loss: 0.1327
+Batch [80/313], Loss: 0.1859
+Batch [90/313], Loss: 0.1691
+Batch [100/313], Loss: 0.1876
+Batch [110/313], Loss: 0.2239
+Batch [120/313], Loss: 0.2427
+Batch [130/313], Loss: 0.2280
+Batch [140/313], Loss: 0.2832
+Batch [150/313], Loss: 0.2668
+Batch [160/313], Loss: 0.1808
+Batch [170/313], Loss: 0.2706
+Batch [180/313], Loss: 0.1655
+Batch [190/313], Loss: 0.3188
+Batch [200/313], Loss: 0.2292
+Batch [210/313], Loss: 0.1485
+Batch [220/313], Loss: 0.1406
+Batch [230/313], Loss: 0.1615
+Batch [240/313], Loss: 0.3232
+Batch [250/313], Loss: 0.2461
+Batch [260/313], Loss: 0.1318
+Batch [270/313], Loss: 0.2004
+Batch [280/313], Loss: 0.1423
+Batch [290/313], Loss: 0.1439
+Batch [300/313], Loss: 0.2608
+Batch [310/313], Loss: 0.2410
+
+Epoch 9 Results:
+Time: 303.38s
+Train - Loss: 0.2109, Acc: 0.9291, F1: 0.9290, Precision: 0.9290, Recall: 0.9291
+Val   - Loss: 0.2199, Acc: 0.9231, F1: 0.9232, Precision: 0.9239, Recall: 0.9231
+No improvement in validation accuracy for 1 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [10/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.0931
+Batch [10/313], Loss: 0.2512
+Batch [20/313], Loss: 0.1378
+Batch [30/313], Loss: 0.1652
+Batch [40/313], Loss: 0.2399
+Batch [50/313], Loss: 0.2172
+Batch [60/313], Loss: 0.1672
+Batch [70/313], Loss: 0.1771
+Batch [80/313], Loss: 0.1554
+Batch [90/313], Loss: 0.2470
+Batch [100/313], Loss: 0.2460
+Batch [110/313], Loss: 0.1909
+Batch [120/313], Loss: 0.2057
+Batch [130/313], Loss: 0.2201
+Batch [140/313], Loss: 0.2964
+Batch [150/313], Loss: 0.2409
+Batch [160/313], Loss: 0.2216
+Batch [170/313], Loss: 0.1668
+Batch [180/313], Loss: 0.1799
+Batch [190/313], Loss: 0.1840
+Batch [200/313], Loss: 0.1785
+Batch [210/313], Loss: 0.1386
+Batch [220/313], Loss: 0.1751
+Batch [230/313], Loss: 0.0815
+Batch [240/313], Loss: 0.1634
+Batch [250/313], Loss: 0.1848
+Batch [260/313], Loss: 0.3110
+Batch [270/313], Loss: 0.2721
+Batch [280/313], Loss: 0.2593
+Batch [290/313], Loss: 0.2033
+Batch [300/313], Loss: 0.2186
+Batch [310/313], Loss: 0.2436
+
+Epoch 10 Results:
+Time: 310.09s
+Train - Loss: 0.2086, Acc: 0.9280, F1: 0.9280, Precision: 0.9280, Recall: 0.9280
+Val   - Loss: 0.2254, Acc: 0.9238, F1: 0.9241, Precision: 0.9256, Recall: 0.9238
+No improvement in validation accuracy for 2 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [11/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.1817
+Batch [10/313], Loss: 0.2574
+Batch [20/313], Loss: 0.1600
+Batch [30/313], Loss: 0.1469
+Batch [40/313], Loss: 0.2741
+Batch [50/313], Loss: 0.1648
+Batch [60/313], Loss: 0.2083
+Batch [70/313], Loss: 0.2303
+Batch [80/313], Loss: 0.2006
+Batch [90/313], Loss: 0.1836
+Batch [100/313], Loss: 0.1368
+Batch [110/313], Loss: 0.2132
+Batch [120/313], Loss: 0.2130
+Batch [130/313], Loss: 0.2069
+Batch [140/313], Loss: 0.1832
+Batch [150/313], Loss: 0.3364
+Batch [160/313], Loss: 0.2057
+Batch [170/313], Loss: 0.2172
+Batch [180/313], Loss: 0.2441
+Batch [190/313], Loss: 0.1977
+Batch [200/313], Loss: 0.2361
+Batch [210/313], Loss: 0.1233
+Batch [220/313], Loss: 0.1750
+Batch [230/313], Loss: 0.2159
+Batch [240/313], Loss: 0.2560
+Batch [250/313], Loss: 0.1420
+Batch [260/313], Loss: 0.1885
+Batch [270/313], Loss: 0.2265
+Batch [280/313], Loss: 0.1314
+Batch [290/313], Loss: 0.1811
+Batch [300/313], Loss: 0.1191
+Batch [310/313], Loss: 0.2441
+
+Epoch 11 Results:
+Time: 317.96s
+Train - Loss: 0.2030, Acc: 0.9308, F1: 0.9308, Precision: 0.9308, Recall: 0.9308
+Val   - Loss: 0.2222, Acc: 0.9260, F1: 0.9260, Precision: 0.9265, Recall: 0.9260
+No improvement in validation accuracy for 3 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [12/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.2610
+Batch [10/313], Loss: 0.2224
+Batch [20/313], Loss: 0.0998
+Batch [30/313], Loss: 0.2248
+Batch [40/313], Loss: 0.1964
+Batch [50/313], Loss: 0.1115
+Batch [60/313], Loss: 0.1593
+Batch [70/313], Loss: 0.1864
+Batch [80/313], Loss: 0.0736
+Batch [90/313], Loss: 0.1847
+Batch [100/313], Loss: 0.1800
+Batch [110/313], Loss: 0.1299
+Batch [120/313], Loss: 0.1226
+Batch [130/313], Loss: 0.1945
+Batch [140/313], Loss: 0.2390
+Batch [150/313], Loss: 0.2642
+Batch [160/313], Loss: 0.1399
+Batch [170/313], Loss: 0.3041
+Batch [180/313], Loss: 0.2185
+Batch [190/313], Loss: 0.2003
+Batch [200/313], Loss: 0.1255
+Batch [210/313], Loss: 0.2214
+Batch [220/313], Loss: 0.1681
+Batch [230/313], Loss: 0.2558
+Batch [240/313], Loss: 0.2328
+Batch [250/313], Loss: 0.1441
+Batch [260/313], Loss: 0.2722
+Batch [270/313], Loss: 0.1561
+Batch [280/313], Loss: 0.2668
+Batch [290/313], Loss: 0.2328
+Batch [300/313], Loss: 0.2565
+Batch [310/313], Loss: 0.2420
+
+Epoch 12 Results:
+Time: 310.65s
+Train - Loss: 0.2046, Acc: 0.9291, F1: 0.9291, Precision: 0.9291, Recall: 0.9291
+Val   - Loss: 0.2231, Acc: 0.9251, F1: 0.9250, Precision: 0.9255, Recall: 0.9251
+No improvement in validation accuracy for 4 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [13/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.1487
+Batch [10/313], Loss: 0.1777
+Batch [20/313], Loss: 0.1423
+Batch [30/313], Loss: 0.1756
+Batch [40/313], Loss: 0.2104
+Batch [50/313], Loss: 0.1827
+Batch [60/313], Loss: 0.2263
+Batch [70/313], Loss: 0.2495
+Batch [80/313], Loss: 0.1496
+Batch [90/313], Loss: 0.0968
+Batch [100/313], Loss: 0.2001
+Batch [110/313], Loss: 0.2042
+Batch [120/313], Loss: 0.2146
+Batch [130/313], Loss: 0.2976
+Batch [140/313], Loss: 0.1665
+Batch [150/313], Loss: 0.1499
+Batch [160/313], Loss: 0.1106
+Batch [170/313], Loss: 0.1778
+Batch [180/313], Loss: 0.1747
+Batch [190/313], Loss: 0.2627
+Batch [200/313], Loss: 0.1473
+Batch [210/313], Loss: 0.2281
+Batch [220/313], Loss: 0.1457
+Batch [230/313], Loss: 0.2260
+Batch [240/313], Loss: 0.1774
+Batch [250/313], Loss: 0.1180
+Batch [260/313], Loss: 0.3147
+Batch [270/313], Loss: 0.1289
+Batch [280/313], Loss: 0.2755
+Batch [290/313], Loss: 0.2558
+Batch [300/313], Loss: 0.1995
+Batch [310/313], Loss: 0.1541
+
+Epoch 13 Results:
+Time: 292.23s
+Train - Loss: 0.2043, Acc: 0.9304, F1: 0.9304, Precision: 0.9304, Recall: 0.9304
+Val   - Loss: 0.2184, Acc: 0.9266, F1: 0.9267, Precision: 0.9269, Recall: 0.9266
+New best model saved! Validation accuracy: 0.9266
+--------------------------------------------------------------------------------
+
+Epoch [14/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.2190
+Batch [10/313], Loss: 0.2684
+Batch [20/313], Loss: 0.1093
+Batch [30/313], Loss: 0.2410
+Batch [40/313], Loss: 0.2266
+Batch [50/313], Loss: 0.2122
+Batch [60/313], Loss: 0.1367
+Batch [70/313], Loss: 0.1616
+Batch [80/313], Loss: 0.1834
+Batch [90/313], Loss: 0.2334
+Batch [100/313], Loss: 0.1566
+Batch [110/313], Loss: 0.2003
+Batch [120/313], Loss: 0.1147
+Batch [130/313], Loss: 0.1795
+Batch [140/313], Loss: 0.1364
+Batch [150/313], Loss: 0.1084
+Batch [160/313], Loss: 0.1813
+Batch [170/313], Loss: 0.2454
+Batch [180/313], Loss: 0.1853
+Batch [190/313], Loss: 0.3176
+Batch [200/313], Loss: 0.1107
+Batch [210/313], Loss: 0.1212
+Batch [220/313], Loss: 0.2173
+Batch [230/313], Loss: 0.1966
+Batch [240/313], Loss: 0.1942
+Batch [250/313], Loss: 0.1615
+Batch [260/313], Loss: 0.2317
+Batch [270/313], Loss: 0.2116
+Batch [280/313], Loss: 0.1847
+Batch [290/313], Loss: 0.1521
+Batch [300/313], Loss: 0.1918
+Batch [310/313], Loss: 0.1577
+
+Epoch 14 Results:
+Time: 286.77s
+Train - Loss: 0.2032, Acc: 0.9303, F1: 0.9303, Precision: 0.9303, Recall: 0.9303
+Val   - Loss: 0.2271, Acc: 0.9251, F1: 0.9251, Precision: 0.9255, Recall: 0.9251
+No improvement in validation accuracy for 1 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [15/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.2168
+Batch [10/313], Loss: 0.1866
+Batch [20/313], Loss: 0.1360
+Batch [30/313], Loss: 0.1854
+Batch [40/313], Loss: 0.1548
+Batch [50/313], Loss: 0.1769
+Batch [60/313], Loss: 0.1439
+Batch [70/313], Loss: 0.2654
+Batch [80/313], Loss: 0.2448
+Batch [90/313], Loss: 0.1097
+Batch [100/313], Loss: 0.1169
+Batch [110/313], Loss: 0.1965
+Batch [120/313], Loss: 0.2403
+Batch [130/313], Loss: 0.2877
+Batch [140/313], Loss: 0.2464
+Batch [150/313], Loss: 0.2798
+Batch [160/313], Loss: 0.1979
+Batch [170/313], Loss: 0.1634
+Batch [180/313], Loss: 0.1787
+Batch [190/313], Loss: 0.1716
+Batch [200/313], Loss: 0.1861
+Batch [210/313], Loss: 0.3162
+Batch [220/313], Loss: 0.2067
+Batch [230/313], Loss: 0.2276
+Batch [240/313], Loss: 0.2215
+Batch [250/313], Loss: 0.1956
+Batch [260/313], Loss: 0.2728
+Batch [270/313], Loss: 0.2595
+Batch [280/313], Loss: 0.2464
+Batch [290/313], Loss: 0.1573
+Batch [300/313], Loss: 0.1778
+Batch [310/313], Loss: 0.0709
+
+Epoch 15 Results:
+Time: 285.24s
+Train - Loss: 0.1998, Acc: 0.9308, F1: 0.9307, Precision: 0.9307, Recall: 0.9308
+Val   - Loss: 0.2212, Acc: 0.9269, F1: 0.9269, Precision: 0.9272, Recall: 0.9269
+New best model saved! Validation accuracy: 0.9269
+--------------------------------------------------------------------------------
+
+Epoch [16/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.1832
+Batch [10/313], Loss: 0.2064
+Batch [20/313], Loss: 0.1049
+Batch [30/313], Loss: 0.1928
+Batch [40/313], Loss: 0.2168
+Batch [50/313], Loss: 0.1249
+Batch [60/313], Loss: 0.0803
+Batch [70/313], Loss: 0.1274
+Batch [80/313], Loss: 0.2504
+Batch [90/313], Loss: 0.2281
+Batch [100/313], Loss: 0.1965
+Batch [110/313], Loss: 0.1983
+Batch [120/313], Loss: 0.1677
+Batch [130/313], Loss: 0.1887
+Batch [140/313], Loss: 0.2113
+Batch [150/313], Loss: 0.1369
+Batch [160/313], Loss: 0.2247
+Batch [170/313], Loss: 0.2338
+Batch [180/313], Loss: 0.1930
+Batch [190/313], Loss: 0.1883
+Batch [200/313], Loss: 0.2057
+Batch [210/313], Loss: 0.3154
+Batch [220/313], Loss: 0.3094
+Batch [230/313], Loss: 0.1978
+Batch [240/313], Loss: 0.2151
+Batch [250/313], Loss: 0.2286
+Batch [260/313], Loss: 0.1609
+Batch [270/313], Loss: 0.2416
+Batch [280/313], Loss: 0.2118
+Batch [290/313], Loss: 0.1076
+Batch [300/313], Loss: 0.1437
+Batch [310/313], Loss: 0.1464
+
+Epoch 16 Results:
+Time: 285.46s
+Train - Loss: 0.1960, Acc: 0.9320, F1: 0.9320, Precision: 0.9320, Recall: 0.9320
+Val   - Loss: 0.2247, Acc: 0.9253, F1: 0.9252, Precision: 0.9254, Recall: 0.9253
+No improvement in validation accuracy for 1 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [17/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.3198
+Batch [10/313], Loss: 0.1024
+Batch [20/313], Loss: 0.1466
+Batch [30/313], Loss: 0.1280
+Batch [40/313], Loss: 0.1387
+Batch [50/313], Loss: 0.2406
+Batch [60/313], Loss: 0.1247
+Batch [70/313], Loss: 0.1840
+Batch [80/313], Loss: 0.1894
+Batch [90/313], Loss: 0.1740
+Batch [100/313], Loss: 0.1463
+Batch [110/313], Loss: 0.1053
+Batch [120/313], Loss: 0.1527
+Batch [130/313], Loss: 0.2360
+Batch [140/313], Loss: 0.2529
+Batch [150/313], Loss: 0.2767
+Batch [160/313], Loss: 0.1646
+Batch [170/313], Loss: 0.2338
+Batch [180/313], Loss: 0.1545
+Batch [190/313], Loss: 0.1592
+Batch [200/313], Loss: 0.2729
+Batch [210/313], Loss: 0.2433
+Batch [220/313], Loss: 0.2465
+Batch [230/313], Loss: 0.2331
+Batch [240/313], Loss: 0.2776
+Batch [250/313], Loss: 0.2096
+Batch [260/313], Loss: 0.1634
+Batch [270/313], Loss: 0.2248
+Batch [280/313], Loss: 0.1251
+Batch [290/313], Loss: 0.1186
+Batch [300/313], Loss: 0.2491
+Batch [310/313], Loss: 0.1722
+
+Epoch 17 Results:
+Time: 285.36s
+Train - Loss: 0.2006, Acc: 0.9304, F1: 0.9304, Precision: 0.9304, Recall: 0.9304
+Val   - Loss: 0.2227, Acc: 0.9237, F1: 0.9236, Precision: 0.9241, Recall: 0.9237
+No improvement in validation accuracy for 2 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [18/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.1307
+Batch [10/313], Loss: 0.2577
+Batch [20/313], Loss: 0.1819
+Batch [30/313], Loss: 0.1502
+Batch [40/313], Loss: 0.2181
+Batch [50/313], Loss: 0.1436
+Batch [60/313], Loss: 0.1737
+Batch [70/313], Loss: 0.1451
+Batch [80/313], Loss: 0.1580
+Batch [90/313], Loss: 0.1094
+Batch [100/313], Loss: 0.2607
+Batch [110/313], Loss: 0.1682
+Batch [120/313], Loss: 0.1780
+Batch [130/313], Loss: 0.1723
+Batch [140/313], Loss: 0.1743
+Batch [150/313], Loss: 0.2066
+Batch [160/313], Loss: 0.1299
+Batch [170/313], Loss: 0.2278
+Batch [180/313], Loss: 0.4043
+Batch [190/313], Loss: 0.2957
+Batch [200/313], Loss: 0.1737
+Batch [210/313], Loss: 0.0988
+Batch [220/313], Loss: 0.1579
+Batch [230/313], Loss: 0.1736
+Batch [240/313], Loss: 0.2269
+Batch [250/313], Loss: 0.2411
+Batch [260/313], Loss: 0.3011
+Batch [270/313], Loss: 0.2090
+Batch [280/313], Loss: 0.1534
+Batch [290/313], Loss: 0.1881
+Batch [300/313], Loss: 0.2454
+Batch [310/313], Loss: 0.2371
+
+Epoch 18 Results:
+Time: 283.76s
+Train - Loss: 0.1980, Acc: 0.9311, F1: 0.9310, Precision: 0.9310, Recall: 0.9311
+Val   - Loss: 0.2270, Acc: 0.9218, F1: 0.9219, Precision: 0.9228, Recall: 0.9218
+No improvement in validation accuracy for 3 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [19/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.2302
+Batch [10/313], Loss: 0.2521
+Batch [20/313], Loss: 0.2033
+Batch [30/313], Loss: 0.1082
+Batch [40/313], Loss: 0.1262
+Batch [50/313], Loss: 0.2471
+Batch [60/313], Loss: 0.2421
+Batch [70/313], Loss: 0.2299
+Batch [80/313], Loss: 0.1584
+Batch [90/313], Loss: 0.2129
+Batch [100/313], Loss: 0.1632
+Batch [110/313], Loss: 0.1893
+Batch [120/313], Loss: 0.2326
+Batch [130/313], Loss: 0.1475
+Batch [140/313], Loss: 0.1873
+Batch [150/313], Loss: 0.1183
+Batch [160/313], Loss: 0.2185
+Batch [170/313], Loss: 0.2480
+Batch [180/313], Loss: 0.2273
+Batch [190/313], Loss: 0.1977
+Batch [200/313], Loss: 0.1776
+Batch [210/313], Loss: 0.2667
+Batch [220/313], Loss: 0.1842
+Batch [230/313], Loss: 0.2324
+Batch [240/313], Loss: 0.1970
+Batch [250/313], Loss: 0.2485
+Batch [260/313], Loss: 0.1522
+Batch [270/313], Loss: 0.2789
+Batch [280/313], Loss: 0.2645
+Batch [290/313], Loss: 0.2963
+Batch [300/313], Loss: 0.2284
+Batch [310/313], Loss: 0.2887
+
+Epoch 19 Results:
+Time: 283.71s
+Train - Loss: 0.2007, Acc: 0.9298, F1: 0.9298, Precision: 0.9298, Recall: 0.9298
+Val   - Loss: 0.2252, Acc: 0.9244, F1: 0.9245, Precision: 0.9250, Recall: 0.9244
+No improvement in validation accuracy for 4 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [20/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.1554
+Batch [10/313], Loss: 0.2008
+Batch [20/313], Loss: 0.2534
+Batch [30/313], Loss: 0.1005
+Batch [40/313], Loss: 0.1458
+Batch [50/313], Loss: 0.1723
+Batch [60/313], Loss: 0.1872
+Batch [70/313], Loss: 0.1797
+Batch [80/313], Loss: 0.1842
+Batch [90/313], Loss: 0.3248
+Batch [100/313], Loss: 0.1683
+Batch [110/313], Loss: 0.3023
+Batch [120/313], Loss: 0.2043
+Batch [130/313], Loss: 0.1048
+Batch [140/313], Loss: 0.1975
+Batch [150/313], Loss: 0.2268
+Batch [160/313], Loss: 0.0991
+Batch [170/313], Loss: 0.1881
+Batch [180/313], Loss: 0.1091
+Batch [190/313], Loss: 0.2516
+Batch [200/313], Loss: 0.1544
+Batch [210/313], Loss: 0.1801
+Batch [220/313], Loss: 0.1470
+Batch [230/313], Loss: 0.1535
+Batch [240/313], Loss: 0.1368
+Batch [250/313], Loss: 0.3005
+Batch [260/313], Loss: 0.1737
+Batch [270/313], Loss: 0.1523
+Batch [280/313], Loss: 0.2120
+Batch [290/313], Loss: 0.2097
+Batch [300/313], Loss: 0.1952
+Batch [310/313], Loss: 0.1748
+
+Epoch 20 Results:
+Time: 282.80s
+Train - Loss: 0.1915, Acc: 0.9345, F1: 0.9345, Precision: 0.9345, Recall: 0.9345
+Val   - Loss: 0.2195, Acc: 0.9269, F1: 0.9270, Precision: 0.9274, Recall: 0.9269
+No improvement in validation accuracy for 5 epoch(s)
+
+Early stopping triggered! No improvement for 5 epochs.
+Best validation accuracy: 0.9269
+
+Training completed!
+Best validation accuracy: 0.9269
+\nGrafik training telah disimpan sebagai '/home/manix/Documents/Semester 7/DeepLearn/Tugas-2/hasil_training_Swin.png'
+
+Loading best model for final evaluation...
+
+================================================================================
+FINAL EVALUATION RESULTS
+================================================================================
+Final Validation Metrics:
+Accuracy:  0.9269
+F1-Score:  0.9269
+Precision: 0.9272
+Recall:    0.9269
+
+Detailed Classification Report:
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+           0       0.93      0.96      0.94      1000
+           1       0.96      0.97      0.96      1000
+           2       0.92      0.90      0.91      1000
+           3       0.86      0.84      0.85      1000
+           4       0.91      0.91      0.91      1000
+           5       0.86      0.89      0.88      1000
+           6       0.94      0.95      0.94      1000
+           7       0.95      0.94      0.95      1000
+           8       0.98      0.96      0.97      1000
+           9       0.97      0.95      0.96      1000
+
+    accuracy                           0.93     10000
+   macro avg       0.93      0.93      0.93     10000
+weighted avg       0.93      0.93      0.93     10000
+
+
+Generating confusion matrix...
+Confusion matrix telah disimpan sebagai '/home/manix/Documents/Semester 7/DeepLearn/Tugas-2/confusion_matrix_swin.png'
+
+================================================================================
+INFERENCE TIME MEASUREMENT
+================================================================================
+Warming up GPU...
+Measuring inference time...
+
+Hardware: GPU: NVIDIA GeForce RTX 3050 Laptop GPU (3.7 GB)
+Total images processed: 10000
+Total inference time: 55.782 seconds
+Average time per image: 5.58 ms
+Throughput: 179.27 images/second
+Average batch time: 0.6790 ± 0.0677 seconds
+
+Best model saved as: /home/manix/Documents/Semester 7/DeepLearn/Tugas-2/best_swin_model.pth
+
+Model Summary:
+- Architecture: Swin Transformer Tiny with ImageNet pretraining
+- Transfer Learning: Frozen backbone + trainable classifier
+- Input size: 224x224x3
+- Output classes: 10
+- Total parameters: 27,527,044
+- Trainable parameters: 7,690
