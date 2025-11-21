@@ -1055,3 +1055,733 @@ New best model saved! Validation accuracy: 0.7702
 
 Epoch [10/25]
 --------------------------------------------------
+Batch [0/313], Loss: 1.0238
+Batch [10/313], Loss: 0.9226
+Batch [20/313], Loss: 0.8936
+Batch [30/313], Loss: 0.9596
+Batch [40/313], Loss: 1.0094
+Batch [50/313], Loss: 1.0161
+Batch [60/313], Loss: 1.0181
+Batch [70/313], Loss: 0.9687
+Batch [80/313], Loss: 0.8973
+Batch [90/313], Loss: 0.8617
+Batch [100/313], Loss: 0.9325
+Batch [110/313], Loss: 0.9698
+Batch [120/313], Loss: 1.1191
+Batch [130/313], Loss: 0.9156
+Batch [140/313], Loss: 1.0694
+Batch [150/313], Loss: 0.8388
+Batch [160/313], Loss: 1.0895
+Batch [170/313], Loss: 0.9366
+Batch [180/313], Loss: 0.9099
+Batch [190/313], Loss: 0.7881
+Batch [200/313], Loss: 0.8959
+Batch [210/313], Loss: 0.9323
+Batch [220/313], Loss: 0.9041
+Batch [230/313], Loss: 1.0868
+Batch [240/313], Loss: 0.8114
+Batch [250/313], Loss: 0.9731
+Batch [260/313], Loss: 1.0689
+Batch [270/313], Loss: 0.9656
+Batch [280/313], Loss: 1.0356
+Batch [290/313], Loss: 1.0106
+Batch [300/313], Loss: 1.1193
+Batch [310/313], Loss: 1.0878
+
+Epoch 10 Results:
+Time: 264.11s
+Train - Loss: 1.0033, Acc: 0.6328, F1: 0.6339, Precision: 0.6363, Recall: 0.6328
+Val   - Loss: 0.6649, Acc: 0.7696, F1: 0.7684, Precision: 0.7686, Recall: 0.7696
+No improvement in validation accuracy for 1 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [11/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.9517
+Batch [10/313], Loss: 0.8534
+Batch [20/313], Loss: 0.8368
+Batch [30/313], Loss: 0.9893
+Batch [40/313], Loss: 0.7861
+Batch [50/313], Loss: 0.9667
+Batch [60/313], Loss: 1.1758
+Batch [70/313], Loss: 0.9013
+Batch [80/313], Loss: 1.0135
+Batch [90/313], Loss: 1.0834
+Batch [100/313], Loss: 0.9107
+Batch [110/313], Loss: 1.0321
+Batch [120/313], Loss: 1.0218
+Batch [130/313], Loss: 0.9472
+Batch [140/313], Loss: 0.9986
+Batch [150/313], Loss: 0.9025
+Batch [160/313], Loss: 1.0476
+Batch [170/313], Loss: 0.9691
+Batch [180/313], Loss: 1.0763
+Batch [190/313], Loss: 0.9931
+Batch [200/313], Loss: 0.9606
+Batch [210/313], Loss: 1.0204
+Batch [220/313], Loss: 1.1037
+Batch [230/313], Loss: 0.8506
+Batch [240/313], Loss: 1.1421
+Batch [250/313], Loss: 0.9899
+Batch [260/313], Loss: 1.1238
+Batch [270/313], Loss: 1.0316
+Batch [280/313], Loss: 1.0851
+Batch [290/313], Loss: 1.0945
+Batch [300/313], Loss: 1.0426
+Batch [310/313], Loss: 0.9692
+
+Epoch 11 Results:
+Time: 257.77s
+Train - Loss: 0.9887, Acc: 0.6401, F1: 0.6411, Precision: 0.6437, Recall: 0.6401
+Val   - Loss: 0.6608, Acc: 0.7714, F1: 0.7703, Precision: 0.7704, Recall: 0.7714
+New best model saved! Validation accuracy: 0.7714
+--------------------------------------------------------------------------------
+
+Epoch [12/25]
+--------------------------------------------------
+Batch [0/313], Loss: 1.0541
+Batch [10/313], Loss: 0.9309
+Batch [20/313], Loss: 1.0391
+Batch [30/313], Loss: 1.0245
+Batch [40/313], Loss: 1.0462
+Batch [50/313], Loss: 1.0289
+Batch [60/313], Loss: 0.9483
+Batch [70/313], Loss: 1.0419
+Batch [80/313], Loss: 1.1164
+Batch [90/313], Loss: 0.9107
+Batch [100/313], Loss: 0.9723
+Batch [110/313], Loss: 1.0292
+Batch [120/313], Loss: 0.8011
+Batch [130/313], Loss: 1.0192
+Batch [140/313], Loss: 1.1355
+Batch [150/313], Loss: 1.0270
+Batch [160/313], Loss: 0.9807
+Batch [170/313], Loss: 1.1986
+Batch [180/313], Loss: 1.0591
+Batch [190/313], Loss: 0.9449
+Batch [200/313], Loss: 1.0378
+Batch [210/313], Loss: 0.9522
+Batch [220/313], Loss: 0.9331
+Batch [230/313], Loss: 0.8995
+Batch [240/313], Loss: 1.0661
+Batch [250/313], Loss: 1.0272
+Batch [260/313], Loss: 1.0981
+Batch [270/313], Loss: 0.9955
+Batch [280/313], Loss: 0.9434
+Batch [290/313], Loss: 0.9400
+Batch [300/313], Loss: 0.9337
+Batch [310/313], Loss: 1.1297
+
+Epoch 12 Results:
+Time: 261.05s
+Train - Loss: 0.9966, Acc: 0.6350, F1: 0.6369, Precision: 0.6405, Recall: 0.6350
+Val   - Loss: 0.6634, Acc: 0.7702, F1: 0.7693, Precision: 0.7704, Recall: 0.7702
+No improvement in validation accuracy for 1 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [13/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.9516
+Batch [10/313], Loss: 1.0521
+Batch [20/313], Loss: 0.8645
+Batch [30/313], Loss: 1.0840
+Batch [40/313], Loss: 1.0840
+Batch [50/313], Loss: 1.0924
+Batch [60/313], Loss: 1.0019
+Batch [70/313], Loss: 1.0480
+Batch [80/313], Loss: 1.0576
+Batch [90/313], Loss: 0.9850
+Batch [100/313], Loss: 0.9378
+Batch [110/313], Loss: 1.2115
+Batch [120/313], Loss: 1.0229
+Batch [130/313], Loss: 0.9360
+Batch [140/313], Loss: 1.0866
+Batch [150/313], Loss: 0.9443
+Batch [160/313], Loss: 1.0655
+Batch [170/313], Loss: 0.9581
+Batch [180/313], Loss: 0.9307
+Batch [190/313], Loss: 1.0226
+Batch [200/313], Loss: 0.7774
+Batch [210/313], Loss: 1.0014
+Batch [220/313], Loss: 0.9262
+Batch [230/313], Loss: 0.9092
+Batch [240/313], Loss: 1.0173
+Batch [250/313], Loss: 0.9155
+Batch [260/313], Loss: 0.9785
+Batch [270/313], Loss: 0.9167
+Batch [280/313], Loss: 0.8802
+Batch [290/313], Loss: 0.7936
+Batch [300/313], Loss: 1.0251
+Batch [310/313], Loss: 1.0019
+
+Epoch 13 Results:
+Time: 263.41s
+Train - Loss: 0.9911, Acc: 0.6388, F1: 0.6391, Precision: 0.6400, Recall: 0.6388
+Val   - Loss: 0.6582, Acc: 0.7716, F1: 0.7699, Precision: 0.7698, Recall: 0.7716
+New best model saved! Validation accuracy: 0.7716
+--------------------------------------------------------------------------------
+
+Epoch [14/25]
+--------------------------------------------------
+Batch [0/313], Loss: 1.0659
+Batch [10/313], Loss: 0.9290
+Batch [20/313], Loss: 1.0469
+Batch [30/313], Loss: 1.0599
+Batch [40/313], Loss: 0.9111
+Batch [50/313], Loss: 1.0869
+Batch [60/313], Loss: 0.9504
+Batch [70/313], Loss: 1.1130
+Batch [80/313], Loss: 0.7197
+Batch [90/313], Loss: 1.0075
+Batch [100/313], Loss: 0.9274
+Batch [110/313], Loss: 0.8949
+Batch [120/313], Loss: 1.0013
+Batch [130/313], Loss: 1.0290
+Batch [140/313], Loss: 1.1720
+Batch [150/313], Loss: 1.0263
+Batch [160/313], Loss: 1.0436
+Batch [170/313], Loss: 1.0265
+Batch [180/313], Loss: 0.9640
+Batch [190/313], Loss: 1.1649
+Batch [200/313], Loss: 0.9852
+Batch [210/313], Loss: 0.9943
+Batch [220/313], Loss: 0.8623
+Batch [230/313], Loss: 1.0629
+Batch [240/313], Loss: 0.9235
+Batch [250/313], Loss: 1.0001
+Batch [260/313], Loss: 0.9936
+Batch [270/313], Loss: 0.9081
+Batch [280/313], Loss: 0.8438
+Batch [290/313], Loss: 0.9627
+Batch [300/313], Loss: 0.9372
+Batch [310/313], Loss: 1.0339
+
+Epoch 14 Results:
+Time: 263.32s
+Train - Loss: 0.9970, Acc: 0.6328, F1: 0.6333, Precision: 0.6348, Recall: 0.6328
+Val   - Loss: 0.6629, Acc: 0.7705, F1: 0.7700, Precision: 0.7705, Recall: 0.7705
+No improvement in validation accuracy for 1 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [15/25]
+--------------------------------------------------
+Batch [0/313], Loss: 1.0606
+Batch [10/313], Loss: 0.9783
+Batch [20/313], Loss: 0.8968
+Batch [30/313], Loss: 1.1671
+Batch [40/313], Loss: 1.2002
+Batch [50/313], Loss: 1.1175
+Batch [60/313], Loss: 0.9631
+Batch [70/313], Loss: 0.9499
+Batch [80/313], Loss: 1.0790
+Batch [90/313], Loss: 1.0038
+Batch [100/313], Loss: 0.8817
+Batch [110/313], Loss: 1.0149
+Batch [120/313], Loss: 0.9227
+Batch [130/313], Loss: 1.0240
+Batch [140/313], Loss: 1.1334
+Batch [150/313], Loss: 1.1569
+Batch [160/313], Loss: 1.0776
+Batch [170/313], Loss: 1.0787
+Batch [180/313], Loss: 1.0384
+Batch [190/313], Loss: 0.9099
+Batch [200/313], Loss: 1.0884
+Batch [210/313], Loss: 0.8573
+Batch [220/313], Loss: 1.1335
+Batch [230/313], Loss: 1.0549
+Batch [240/313], Loss: 1.0325
+Batch [250/313], Loss: 0.6957
+Batch [260/313], Loss: 1.0694
+Batch [270/313], Loss: 1.1094
+Batch [280/313], Loss: 0.9214
+Batch [290/313], Loss: 0.9485
+Batch [300/313], Loss: 1.0774
+Batch [310/313], Loss: 1.0883
+
+Epoch 15 Results:
+Time: 263.18s
+Train - Loss: 0.9952, Acc: 0.6379, F1: 0.6385, Precision: 0.6404, Recall: 0.6379
+Val   - Loss: 0.6626, Acc: 0.7705, F1: 0.7695, Precision: 0.7705, Recall: 0.7705
+No improvement in validation accuracy for 2 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [16/25]
+--------------------------------------------------
+Batch [0/313], Loss: 1.0345
+Batch [10/313], Loss: 0.9925
+Batch [20/313], Loss: 0.7908
+Batch [30/313], Loss: 1.0261
+Batch [40/313], Loss: 1.0531
+Batch [50/313], Loss: 1.0050
+Batch [60/313], Loss: 1.1866
+Batch [70/313], Loss: 0.8275
+Batch [80/313], Loss: 0.8495
+Batch [90/313], Loss: 1.0643
+Batch [100/313], Loss: 0.9719
+Batch [110/313], Loss: 0.8994
+Batch [120/313], Loss: 0.9708
+Batch [130/313], Loss: 1.1227
+Batch [140/313], Loss: 0.9245
+Batch [150/313], Loss: 0.8447
+Batch [160/313], Loss: 1.0393
+Batch [170/313], Loss: 1.0160
+Batch [180/313], Loss: 0.9756
+Batch [190/313], Loss: 0.9527
+Batch [200/313], Loss: 1.1132
+Batch [210/313], Loss: 0.9774
+Batch [220/313], Loss: 0.8990
+Batch [230/313], Loss: 1.0551
+Batch [240/313], Loss: 0.8949
+Batch [250/313], Loss: 0.8342
+Batch [260/313], Loss: 1.0838
+Batch [270/313], Loss: 0.8841
+Batch [280/313], Loss: 0.9956
+Batch [290/313], Loss: 1.1950
+Batch [300/313], Loss: 0.9958
+Batch [310/313], Loss: 0.9105
+
+Epoch 16 Results:
+Time: 249.73s
+Train - Loss: 0.9922, Acc: 0.6368, F1: 0.6373, Precision: 0.6388, Recall: 0.6368
+Val   - Loss: 0.6660, Acc: 0.7699, F1: 0.7686, Precision: 0.7687, Recall: 0.7699
+No improvement in validation accuracy for 3 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [17/25]
+--------------------------------------------------
+Batch [0/313], Loss: 1.0279
+Batch [10/313], Loss: 0.9449
+Batch [20/313], Loss: 0.9985
+Batch [30/313], Loss: 0.9081
+Batch [40/313], Loss: 1.0195
+Batch [50/313], Loss: 1.0628
+Batch [60/313], Loss: 0.9030
+Batch [70/313], Loss: 0.8314
+Batch [80/313], Loss: 0.9548
+Batch [90/313], Loss: 1.0313
+Batch [100/313], Loss: 0.9694
+Batch [110/313], Loss: 1.0359
+Batch [120/313], Loss: 1.0075
+Batch [130/313], Loss: 1.0202
+Batch [140/313], Loss: 1.2164
+Batch [150/313], Loss: 1.0486
+Batch [160/313], Loss: 1.0130
+Batch [170/313], Loss: 0.9551
+Batch [180/313], Loss: 0.9891
+Batch [190/313], Loss: 1.0678
+Batch [200/313], Loss: 0.8488
+Batch [210/313], Loss: 1.0512
+Batch [220/313], Loss: 1.1401
+Batch [230/313], Loss: 1.0692
+Batch [240/313], Loss: 1.0941
+Batch [250/313], Loss: 0.9528
+Batch [260/313], Loss: 0.8676
+Batch [270/313], Loss: 0.9522
+Batch [280/313], Loss: 1.0683
+Batch [290/313], Loss: 1.0354
+Batch [300/313], Loss: 1.0597
+Batch [310/313], Loss: 1.0569
+
+Epoch 17 Results:
+Time: 248.68s
+Train - Loss: 0.9905, Acc: 0.6367, F1: 0.6373, Precision: 0.6389, Recall: 0.6367
+Val   - Loss: 0.6612, Acc: 0.7718, F1: 0.7709, Precision: 0.7707, Recall: 0.7718
+New best model saved! Validation accuracy: 0.7718
+--------------------------------------------------------------------------------
+
+Epoch [18/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.9528
+Batch [10/313], Loss: 1.0238
+Batch [20/313], Loss: 0.9322
+Batch [30/313], Loss: 0.9268
+Batch [40/313], Loss: 1.1405
+Batch [50/313], Loss: 1.1086
+Batch [60/313], Loss: 1.0450
+Batch [70/313], Loss: 1.0063
+Batch [80/313], Loss: 0.9419
+Batch [90/313], Loss: 0.9488
+Batch [100/313], Loss: 0.9220
+Batch [110/313], Loss: 0.9870
+Batch [120/313], Loss: 0.8552
+Batch [130/313], Loss: 1.1145
+Batch [140/313], Loss: 0.8302
+Batch [150/313], Loss: 1.1037
+Batch [160/313], Loss: 0.9221
+Batch [170/313], Loss: 0.9679
+Batch [180/313], Loss: 0.9980
+Batch [190/313], Loss: 0.8759
+Batch [200/313], Loss: 0.9898
+Batch [210/313], Loss: 1.0440
+Batch [220/313], Loss: 0.8894
+Batch [230/313], Loss: 1.1449
+Batch [240/313], Loss: 0.8953
+Batch [250/313], Loss: 0.9559
+Batch [260/313], Loss: 0.9980
+Batch [270/313], Loss: 0.9040
+Batch [280/313], Loss: 1.0633
+Batch [290/313], Loss: 1.0256
+Batch [300/313], Loss: 1.0976
+Batch [310/313], Loss: 1.0709
+
+Epoch 18 Results:
+Time: 248.32s
+Train - Loss: 0.9867, Acc: 0.6376, F1: 0.6378, Precision: 0.6384, Recall: 0.6376
+Val   - Loss: 0.6522, Acc: 0.7717, F1: 0.7709, Precision: 0.7712, Recall: 0.7717
+No improvement in validation accuracy for 1 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [19/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.7403
+Batch [10/313], Loss: 0.9835
+Batch [20/313], Loss: 1.1686
+Batch [30/313], Loss: 0.8669
+Batch [40/313], Loss: 0.9987
+Batch [50/313], Loss: 1.1569
+Batch [60/313], Loss: 0.9421
+Batch [70/313], Loss: 1.0400
+Batch [80/313], Loss: 1.0994
+Batch [90/313], Loss: 1.1255
+Batch [100/313], Loss: 1.0316
+Batch [110/313], Loss: 1.0479
+Batch [120/313], Loss: 0.9451
+Batch [130/313], Loss: 1.2656
+Batch [140/313], Loss: 0.8901
+Batch [150/313], Loss: 1.0419
+Batch [160/313], Loss: 0.9093
+Batch [170/313], Loss: 0.9874
+Batch [180/313], Loss: 0.9928
+Batch [190/313], Loss: 1.0575
+Batch [200/313], Loss: 1.0930
+Batch [210/313], Loss: 1.1453
+Batch [220/313], Loss: 1.1256
+Batch [230/313], Loss: 1.1067
+Batch [240/313], Loss: 1.0909
+Batch [250/313], Loss: 0.8984
+Batch [260/313], Loss: 0.8701
+Batch [270/313], Loss: 0.9241
+Batch [280/313], Loss: 1.0023
+Batch [290/313], Loss: 1.0251
+Batch [300/313], Loss: 0.9554
+Batch [310/313], Loss: 0.8939
+
+Epoch 19 Results:
+Time: 258.38s
+Train - Loss: 0.9907, Acc: 0.6389, F1: 0.6408, Precision: 0.6448, Recall: 0.6389
+Val   - Loss: 0.6646, Acc: 0.7711, F1: 0.7697, Precision: 0.7701, Recall: 0.7711
+No improvement in validation accuracy for 2 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [20/25]
+--------------------------------------------------
+Batch [0/313], Loss: 1.1202
+Batch [10/313], Loss: 1.0102
+Batch [20/313], Loss: 0.9393
+Batch [30/313], Loss: 0.9169
+Batch [40/313], Loss: 0.9123
+Batch [50/313], Loss: 0.9772
+Batch [60/313], Loss: 0.9804
+Batch [70/313], Loss: 0.8309
+Batch [80/313], Loss: 0.9773
+Batch [90/313], Loss: 0.8808
+Batch [100/313], Loss: 0.9128
+Batch [110/313], Loss: 1.1227
+Batch [120/313], Loss: 1.0637
+Batch [130/313], Loss: 0.9949
+Batch [140/313], Loss: 1.0383
+Batch [150/313], Loss: 0.9422
+Batch [160/313], Loss: 1.0606
+Batch [170/313], Loss: 1.0400
+Batch [180/313], Loss: 0.9868
+Batch [190/313], Loss: 1.0019
+Batch [200/313], Loss: 1.0196
+Batch [210/313], Loss: 1.0313
+Batch [220/313], Loss: 0.8628
+Batch [230/313], Loss: 1.0650
+Batch [240/313], Loss: 0.8291
+Batch [250/313], Loss: 0.9804
+Batch [260/313], Loss: 0.9698
+Batch [270/313], Loss: 1.0555
+Batch [280/313], Loss: 0.9888
+Batch [290/313], Loss: 0.9286
+Batch [300/313], Loss: 1.0159
+Batch [310/313], Loss: 1.0165
+
+Epoch 20 Results:
+Time: 276.92s
+Train - Loss: 0.9852, Acc: 0.6387, F1: 0.6400, Precision: 0.6426, Recall: 0.6387
+Val   - Loss: 0.6606, Acc: 0.7687, F1: 0.7680, Precision: 0.7677, Recall: 0.7687
+No improvement in validation accuracy for 3 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [21/25]
+--------------------------------------------------
+Batch [0/313], Loss: 1.0004
+Batch [10/313], Loss: 0.8520
+Batch [20/313], Loss: 1.0869
+Batch [30/313], Loss: 1.1507
+Batch [40/313], Loss: 1.0189
+Batch [50/313], Loss: 0.9803
+Batch [60/313], Loss: 1.0812
+Batch [70/313], Loss: 1.0336
+Batch [80/313], Loss: 1.0876
+Batch [90/313], Loss: 1.0069
+Batch [100/313], Loss: 1.0134
+Batch [110/313], Loss: 0.9897
+Batch [120/313], Loss: 1.1073
+Batch [130/313], Loss: 1.0991
+Batch [140/313], Loss: 1.1006
+Batch [150/313], Loss: 1.0095
+Batch [160/313], Loss: 0.9832
+Batch [170/313], Loss: 0.8195
+Batch [180/313], Loss: 0.9304
+Batch [190/313], Loss: 1.0153
+Batch [200/313], Loss: 0.8327
+Batch [210/313], Loss: 0.8216
+Batch [220/313], Loss: 1.0837
+Batch [230/313], Loss: 1.0756
+Batch [240/313], Loss: 1.0600
+Batch [250/313], Loss: 0.8797
+Batch [260/313], Loss: 1.0734
+Batch [270/313], Loss: 0.8823
+Batch [280/313], Loss: 1.0521
+Batch [290/313], Loss: 0.9838
+Batch [300/313], Loss: 0.8894
+Batch [310/313], Loss: 0.7764
+
+Epoch 21 Results:
+Time: 259.83s
+Train - Loss: 0.9844, Acc: 0.6404, F1: 0.6421, Precision: 0.6448, Recall: 0.6404
+Val   - Loss: 0.6605, Acc: 0.7715, F1: 0.7705, Precision: 0.7709, Recall: 0.7715
+No improvement in validation accuracy for 4 epoch(s)
+--------------------------------------------------------------------------------
+
+Epoch [22/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.8827
+Batch [10/313], Loss: 0.7654
+Batch [20/313], Loss: 1.1721
+Batch [30/313], Loss: 1.0935
+Batch [40/313], Loss: 1.0946
+Batch [50/313], Loss: 0.8693
+Batch [60/313], Loss: 0.8834
+Batch [70/313], Loss: 1.1111
+Batch [80/313], Loss: 0.9916
+Batch [90/313], Loss: 1.1194
+Batch [100/313], Loss: 1.2247
+Batch [110/313], Loss: 0.9568
+Batch [120/313], Loss: 0.9093
+Batch [130/313], Loss: 0.9391
+Batch [140/313], Loss: 0.8421
+Batch [150/313], Loss: 1.0416
+Batch [160/313], Loss: 0.9823
+Batch [170/313], Loss: 1.0891
+Batch [180/313], Loss: 0.7569
+Batch [190/313], Loss: 0.8883
+Batch [200/313], Loss: 1.0438
+Batch [210/313], Loss: 0.8812
+Batch [220/313], Loss: 0.9876
+Batch [230/313], Loss: 0.9748
+Batch [240/313], Loss: 1.0126
+Batch [250/313], Loss: 1.0205
+Batch [260/313], Loss: 0.9779
+Batch [270/313], Loss: 1.1594
+Batch [280/313], Loss: 1.0487
+Batch [290/313], Loss: 0.9254
+Batch [300/313], Loss: 0.8728
+Batch [310/313], Loss: 0.9786
+
+Epoch 22 Results:
+Time: 260.95s
+Train - Loss: 0.9899, Acc: 0.6374, F1: 0.6379, Precision: 0.6397, Recall: 0.6374
+Val   - Loss: 0.6553, Acc: 0.7723, F1: 0.7715, Precision: 0.7717, Recall: 0.7723
+New best model saved! Validation accuracy: 0.7723
+--------------------------------------------------------------------------------
+
+Epoch [23/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.8440
+Batch [10/313], Loss: 0.8297
+Batch [20/313], Loss: 0.9377
+Batch [30/313], Loss: 0.7885
+Batch [40/313], Loss: 0.7964
+Batch [50/313], Loss: 0.8442
+Batch [60/313], Loss: 1.0198
+Batch [70/313], Loss: 0.8734
+Batch [80/313], Loss: 1.0109
+Batch [90/313], Loss: 0.9334
+Batch [100/313], Loss: 0.7866
+Batch [110/313], Loss: 0.8969
+Batch [120/313], Loss: 1.1629
+Batch [130/313], Loss: 0.9424
+Batch [140/313], Loss: 1.2204
+Batch [150/313], Loss: 0.8909
+Batch [160/313], Loss: 1.0580
+Batch [170/313], Loss: 0.9708
+Batch [180/313], Loss: 0.9381
+Batch [190/313], Loss: 0.9555
+Batch [200/313], Loss: 0.9121
+Batch [210/313], Loss: 1.0312
+Batch [220/313], Loss: 1.0411
+Batch [230/313], Loss: 0.9728
+Batch [240/313], Loss: 0.9894
+Batch [250/313], Loss: 0.9932
+Batch [260/313], Loss: 0.7796
+Batch [270/313], Loss: 0.9509
+Batch [280/313], Loss: 0.8469
+Batch [290/313], Loss: 1.0345
+Batch [300/313], Loss: 1.1543
+Batch [310/313], Loss: 1.0655
+
+Epoch 23 Results:
+Time: 250.85s
+Train - Loss: 0.9881, Acc: 0.6377, F1: 0.6385, Precision: 0.6404, Recall: 0.6377
+Val   - Loss: 0.6565, Acc: 0.7729, F1: 0.7724, Precision: 0.7729, Recall: 0.7729
+New best model saved! Validation accuracy: 0.7729
+--------------------------------------------------------------------------------
+
+Epoch [24/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.8924
+Batch [10/313], Loss: 0.9381
+Batch [20/313], Loss: 0.9643
+Batch [30/313], Loss: 0.9251
+Batch [40/313], Loss: 0.8998
+Batch [50/313], Loss: 0.9124
+Batch [60/313], Loss: 0.9576
+Batch [70/313], Loss: 0.9428
+Batch [80/313], Loss: 0.8642
+Batch [90/313], Loss: 0.9431
+Batch [100/313], Loss: 0.9061
+Batch [110/313], Loss: 0.8078
+Batch [120/313], Loss: 1.0325
+Batch [130/313], Loss: 0.9609
+Batch [140/313], Loss: 0.9981
+Batch [150/313], Loss: 1.1176
+Batch [160/313], Loss: 1.0396
+Batch [170/313], Loss: 1.1278
+Batch [180/313], Loss: 1.1086
+Batch [190/313], Loss: 0.8631
+Batch [200/313], Loss: 1.1120
+Batch [210/313], Loss: 1.1329
+Batch [220/313], Loss: 0.9942
+Batch [230/313], Loss: 0.8805
+Batch [240/313], Loss: 1.1390
+Batch [250/313], Loss: 0.9597
+Batch [260/313], Loss: 1.0072
+Batch [270/313], Loss: 0.9709
+Batch [280/313], Loss: 1.0421
+Batch [290/313], Loss: 0.9694
+Batch [300/313], Loss: 0.8493
+Batch [310/313], Loss: 1.2770
+
+Epoch 24 Results:
+Time: 251.11s
+Train - Loss: 0.9852, Acc: 0.6387, F1: 0.6393, Precision: 0.6406, Recall: 0.6387
+Val   - Loss: 0.6597, Acc: 0.7740, F1: 0.7729, Precision: 0.7729, Recall: 0.7740
+New best model saved! Validation accuracy: 0.7740
+--------------------------------------------------------------------------------
+
+Epoch [25/25]
+--------------------------------------------------
+Batch [0/313], Loss: 0.9180
+Batch [10/313], Loss: 1.0884
+Batch [20/313], Loss: 1.0280
+Batch [30/313], Loss: 0.7834
+Batch [40/313], Loss: 0.9793
+Batch [50/313], Loss: 1.1554
+Batch [60/313], Loss: 0.9052
+Batch [70/313], Loss: 0.8624
+Batch [80/313], Loss: 0.8793
+Batch [90/313], Loss: 1.0372
+Batch [100/313], Loss: 0.9569
+Batch [110/313], Loss: 0.9780
+Batch [120/313], Loss: 1.0859
+Batch [130/313], Loss: 0.8533
+Batch [140/313], Loss: 1.0004
+Batch [150/313], Loss: 0.9256
+Batch [160/313], Loss: 0.7721
+Batch [170/313], Loss: 0.8312
+Batch [180/313], Loss: 1.0489
+Batch [190/313], Loss: 1.0515
+Batch [200/313], Loss: 1.0825
+Batch [210/313], Loss: 1.0144
+Batch [220/313], Loss: 0.9563
+Batch [230/313], Loss: 0.9610
+Batch [240/313], Loss: 0.9218
+Batch [250/313], Loss: 0.8602
+Batch [260/313], Loss: 0.8772
+Batch [270/313], Loss: 0.8426
+Batch [280/313], Loss: 1.0731
+Batch [290/313], Loss: 0.8320
+Batch [300/313], Loss: 0.9821
+Batch [310/313], Loss: 0.9422
+
+Epoch 25 Results:
+Time: 250.77s
+Train - Loss: 0.9838, Acc: 0.6402, F1: 0.6424, Precision: 0.6464, Recall: 0.6402
+Val   - Loss: 0.6592, Acc: 0.7727, F1: 0.7713, Precision: 0.7715, Recall: 0.7727
+No improvement in validation accuracy for 1 epoch(s)
+--------------------------------------------------------------------------------
+
+Training completed!
+Best validation accuracy: 0.7740
+\nGrafik training telah disimpan sebagai '/home/manix/Documents/Semester 7/DeepLearn/Tugas-2/hasil_training_CvT.png'
+
+Loading best model for final evaluation...
+
+================================================================================
+FINAL EVALUATION RESULTS
+================================================================================
+Final Validation Metrics:
+Accuracy:  0.7740
+F1-Score:  0.7729
+Precision: 0.7729
+Recall:    0.7740
+
+Detailed Classification Report:
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+           0       0.78      0.82      0.80      1000
+           1       0.88      0.87      0.87      1000
+           2       0.70      0.67      0.69      1000
+           3       0.68      0.65      0.66      1000
+           4       0.71      0.69      0.70      1000
+           5       0.74      0.69      0.71      1000
+           6       0.78      0.88      0.83      1000
+           7       0.76      0.78      0.77      1000
+           8       0.86      0.83      0.84      1000
+           9       0.84      0.87      0.86      1000
+
+    accuracy                           0.77     10000
+   macro avg       0.77      0.77      0.77     10000
+weighted avg       0.77      0.77      0.77     10000
+
+
+Generating confusion matrix...
+Confusion matrix telah disimpan sebagai '/home/manix/Documents/Semester 7/DeepLearn/Tugas-2/confusion_matrix_cvt.png'
+
+================================================================================
+INFERENCE TIME MEASUREMENT
+================================================================================
+Warming up GPU...
+Measuring inference time...
+
+Hardware: GPU: NVIDIA GeForce RTX 3050 Laptop GPU (3.7 GB)
+Total images processed: 10000
+Total inference time: 48.834 seconds
+Average time per image: 4.88 ms
+Throughput: 204.77 images/second
+Average batch time: 0.5835 ± 0.0587 seconds
+
+Best model saved as: /home/manix/Documents/Semester 7/DeepLearn/Tugas-2/best_cvt_model.pth
+
+Model Summary:
+- Architecture: CvT-13 (Convolutional vision Transformer) with ImageNet pretraining
+- Transfer Learning: Frozen backbone + trainable classifier
+- Input size: 224x224x3
+- Output classes: 10
+- Total parameters: 19,616,330
+- Trainable parameters: 3,850
